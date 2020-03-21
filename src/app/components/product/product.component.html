@@ -1,0 +1,15 @@
+<div class="card">
+  <img [src]="assetsUrl + product.imageFileName" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+    <h5 class="text-purple">£{{ product.price }}</h5>
+    <div class="row">
+      <div class="col-12 pr-0 text-right">
+        <button type="button" class="btn btn-link" (click)="basketClick.emit(product)">
+          <img [src]="assetsUrl + basketSVGFileName" width="36px">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

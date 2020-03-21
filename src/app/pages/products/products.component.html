@@ -1,0 +1,19 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-8">
+      <h2>Simple Fruit</h2>
+    </div>
+    <div class="col-4 text-right">
+      Basket total: £{{ basket.total }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-right small mb-2">
+      <button type="button" class="btn btn-link text-purple mr-2" (click)="sortBy('price')">Sort by price</button>
+      <button type="button" class="btn btn-link text-purple" (click)="sortBy('name')">Sort A-Z</button>
+    </div>
+    <div class="col-md-4" *ngFor="let product of products">
+      <app-product [product]="product" (basketClick)="onBasketClick($event)"></app-product>
+    </div>
+  </div>
+</div>

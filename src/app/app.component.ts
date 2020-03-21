@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PRODUCTS_DATA } from 'src/products';
+import { Product } from 'src/models/Product';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'basket-app';
+
 }
